@@ -12,6 +12,9 @@ public class KajianPage {
         kajianObject = new KajianObject(driver);
     }
 
+    public String getURL() {
+        return driver.getCurrentUrl();
+    }
     public void searchKajian(String keyword) {
         driver.findElement(kajianObject.getSearchResult(keyword)).click();
     }

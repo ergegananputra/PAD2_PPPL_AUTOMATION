@@ -11,6 +11,14 @@ public class HomePage {
         homeObject = new HomeObject(driver);
     }
 
+    public String getURL() {
+        return driver.getCurrentUrl();
+    }
+
+    public void clickKajianNavbar() {
+        driver.findElement(homeObject.getKajianNavbar()).click();
+    }
+
     public void clickCreateKajianButton() {
         driver.findElement(homeObject.getCreateKajianButton()).click();
     }
