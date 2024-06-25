@@ -59,11 +59,14 @@ public class PublicKajianReadStepDef {
             String actualURL = KajianMainPage.getURL();
             System.out.println("Actual URL: " + actualURL);
             String containURL = "https://dev.mwcc.masmoendigital.store/kajian/";
-            assertTrue("Expected URL to contain: " + containURL, actualURL.contains(containURL));
+            assert actualURL.contains(containURL);
             Hooks.test.log(Status.INFO, "Redirected to Kajian detail page");
         } catch (Exception e) {
             Hooks.test.log(Status.FAIL, "Failed to redirect to Kajian detail page: " + e.getMessage());
         }
     }
+
+
+
 
 }
