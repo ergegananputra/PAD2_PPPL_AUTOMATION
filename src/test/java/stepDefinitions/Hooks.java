@@ -35,6 +35,15 @@ public class Hooks {
         return driver;
     }
 
+    public static WebDriver resetDriver() {
+        if (driver != null) {
+            driver.quit();
+        }
+        driver = new EdgeDriver();
+        driver.manage().window().maximize();
+        return driver;
+    }
+
     @AfterAll
     public static void closeBrowser() {
         if (driver != null) {

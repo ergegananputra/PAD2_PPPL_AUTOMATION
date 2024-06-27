@@ -51,3 +51,8 @@ Feature: L - Admin Journey
     And the user fill the search form in data kajian page with "Part"
     And the user click on the "detail" button in the data kajian table
     Then the user see the commit message in the detail kajian page
+
+  Scenario: Logout
+    Given user is on admin panel
+    When the user click on the "logout" menu admin page
+    Then the user is redirected to the "public" dashboard page

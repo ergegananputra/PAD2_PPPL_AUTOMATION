@@ -1,4 +1,4 @@
-Feature: Management User Data
+Feature: Admin User Data
 
   Background: User Logged in as Admin
     Given user is on the login page
@@ -29,6 +29,11 @@ Feature: Management User Data
     Given a web browser is at the Data User Detail page
     When the user click one of the pen icon on the user item
     Then a pre-filled form related to the user is shown
+
+  Scenario: Logout
+    Given user is on admin panel
+    When the user click on the "logout" menu admin page
+    Then the user is redirected to the "public" dashboard page
 
 #  Scenario: Delete User
 #    Given a web browser is at the Data User page

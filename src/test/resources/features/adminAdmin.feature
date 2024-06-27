@@ -75,3 +75,8 @@ Feature: L - Admin Journey
     And the user click on the hapus button in kategori kajian
     And the user click on the "ya" button in alert dialog
     Then the user see the kategori kajian with "Mandalika" not in table
+
+  Scenario: Logout
+    Given user is on admin panel
+    When the user click on the "logout" menu admin page
+    Then the user is redirected to the "public" dashboard page

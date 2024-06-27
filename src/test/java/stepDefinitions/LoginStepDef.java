@@ -52,18 +52,25 @@ public class LoginStepDef {
 
     @Then("the user is redirected to the {string} dashboard page")
     public void the_user_is_redirected_to_the_dashboard_page(String type) throws InterruptedException {
-        String containURL = (Objects.equals(type, "admin")) ?
-                "/admin" : "/";
+        boolean isAdmin = (Objects.equals(type, "admin"));
+
         String actualURL = login.getDriver().getCurrentUrl();
 
+        boolean result = false;
+        if (isAdmin) {
+            result = actualURL.contains("/admin");
+        } else {
+            result = !actualURL.contains("/admin");
+        }
+
+
         try {
-            assert actualURL.contains(containURL);
+            assert result;
             Hooks.test.log(Status.PASS,"Redirected to the dashboard page");
         } catch (AssertionError e) {
             Hooks.test.log(
                     Status.FAIL,
-                    "Failed to redirect to the dashboard page. Expected URL contain: " +
-                            containURL + ", but was: " + actualURL
+                    "Failed to redirect to the dashboard page."
             );
         }
     }
@@ -76,5 +83,13 @@ public class LoginStepDef {
         } catch (AssertionError e) {
             Hooks.test.log(Status.FAIL,"Failed to see an error message invalid email or password");
         }
+    }
+
+    @Given("user is on fresh page")
+    public void userIsOnFreshPage() {
+        driver = Hooks.resetDriver();
+        login = new LoginPage(driver);
+
+        driver.get("https://dev.mwcc.masmoendigital.store/");
     }
 }
