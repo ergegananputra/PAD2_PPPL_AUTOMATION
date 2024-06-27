@@ -42,4 +42,8 @@ public class AdminDashboardPage {
     public String getURL() {
         return adminDashboardObject.getURL();
     }
+
+    public void clickHistoryUpload() {
+        driver.findElement(adminDashboardObject.getHistoryUpload()).click();
+    }
 }

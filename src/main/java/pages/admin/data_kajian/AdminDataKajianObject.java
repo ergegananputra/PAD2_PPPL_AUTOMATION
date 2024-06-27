@@ -31,4 +31,11 @@ public class AdminDataKajianObject {
     }
 
 
+    public By getDetailKajianButton() {
+        return By.xpath("(//a[@class='text-info me-2' and @title='View'])[1]");
+    }
+
+    public By getDeleteKajianButton() {
+        return By.xpath("(//form[input[@name='_method' and @value='delete']])[1]");
+    }
 }

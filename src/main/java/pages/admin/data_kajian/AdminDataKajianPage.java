@@ -34,4 +34,12 @@ public class AdminDataKajianPage extends AdminDashboardPage {
     public void isSearchResultVisible(String keyword) {
         super.driver.findElement(adminDataKajianObject.getSearchResult(keyword)).isDisplayed();
     }
+
+    public void clickButtonDetailKajian() {
+        super.driver.findElement(adminDataKajianObject.getDetailKajianButton()).click();
+    }
+
+    public void clickButtonDeleteKajian() {
+        super.driver.findElement(adminDataKajianObject.getDeleteKajianButton()).click();
+    }
 }
