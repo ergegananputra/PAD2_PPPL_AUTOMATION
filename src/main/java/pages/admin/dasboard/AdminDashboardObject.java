@@ -41,4 +41,6 @@ public class AdminDashboardObject {
     public By getLogout() {
         return By.xpath("//div[@class='nav']//a[normalize-space()='Logout']");
     }
+
+    public By getHistoryUpload() {return By.xpath("//div[@class='nav']//a[normalize-space()='History Upload']");}
 }
