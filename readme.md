@@ -18,4 +18,11 @@ dengan ajaran agama Islam, dan mendukung penyebarluasan ilmu agama Islam.
 
 
 ## Laporan UAS Pengujian Perangkat Lunak
-- Spreadsheet (https://docs.google.com/spreadsheets/d/1vR6mp1NTJo4cknUloqb0X-BVgwfrxDg4y2rbOYbTRNc/edit?usp=sharing)
+- Google Spreadsheet (Test Case, Bug Report) (https://docs.google.com/spreadsheets/d/1vR6mp1NTJo4cknUloqb0X-BVgwfrxDg4y2rbOYbTRNc/edit?usp=sharing)
+- Automation Test Script (https://github.com/ergegananputra/PAD2_PPPL_AUTOMATION)
+- Automation Test Report via Extent Report (https://github.com/ergegananputra/PAD2_PPPL_AUTOMATION/blob/e4e3c64c2c14726733f7d75439941e038f95eb44/test-output/ExtentReport.html)
+
+## Cara menjalankan Automation Test Script
+1. Build maven
+3. Buka file [Test Runner](https://github.com/ergegananputra/PAD2_PPPL_AUTOMATION/blob/e4e3c64c2c14726733f7d75439941e038f95eb44/src/test/java/TestRunner.java)
+4. Run
