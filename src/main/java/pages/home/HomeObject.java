@@ -9,6 +9,10 @@ public class HomeObject {
     public HomeObject(WebDriver driver) {
         this.driver = driver;
     }
+
+    public  By getKajianNavbar() {
+        return By.xpath("//a[contains(text(), 'Kajian')]");
+    }
     public By getSearchResult(String keyword) {
         return By.xpath("//div[contains(@class, 'kajian-item') and (contains(@data-title, '" + keyword + "') or contains(@data-pemateri, '" + keyword + "') or contains(@data-deskripsi, '" + keyword + "') or contains(@data-kategori, '" + keyword + "'))]");
     }

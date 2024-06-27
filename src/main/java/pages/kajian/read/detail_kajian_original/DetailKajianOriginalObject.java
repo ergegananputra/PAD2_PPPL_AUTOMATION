@@ -77,4 +77,6 @@ public class DetailKajianOriginalObject {
     public By getNewKajianArrowButton() {
         return By.xpath("//div[@class='card-body-user']//img[contains(@src, 'arrow-right-square.svg')]");
     }
+
+
 }
